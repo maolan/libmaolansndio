@@ -1,13 +1,10 @@
 #pragma once
 #include <string>
 
-#include "maolan/audio/base.hpp"
+#include <maolan/audio/sndio/base.hpp>
 
-
-namespace maolan::audio
-{
-template <typename T> class SNDIOIn : public SNDIO
-{
+namespace maolan::audio {
+template <typename T> class SNDIOIn : public SNDIO {
 public:
   SNDIOIn(const std::string &name, const std::string &device);
 
@@ -15,4 +12,3 @@ public:
   virtual void process();
 };
 } // namespace maolan::audio
-
